@@ -1,0 +1,18 @@
+<span style=font-size:40;color:green>SELECCIONA EL PAIS </span>
+<br>
+<img src=mapa.png usemap=#mapa>
+
+<map name=mapa>	
+
+<area shape=rect coords="202,421,297,534" title="france" onmouseover="uno()">
+<area shape=rect coords="103,513,171,625" title="spain" onmouseover="dos()">
+<area shape=rect coords="41,500,95,589" title="portugal" onmouseover="tres()">
+<area shape=rect coords="117,262,193,328" title="ireland" onmouseover="cuatro()">
+<area shape=rect coords="191,208,264,386" title="uk" onmouseover="cinco()">
+<area shape=rect coords="282,341,322,393" title="holanda" onmouseover="seis()">
+<area shape=rect coords="266,373,310,416" title="belgica" onmouseover="siete()">
+<area shape=rect coords="316,339,415,457" title="alemania" onmouseover="ocho()">
+<area shape=rect coords="573,534,858,690" title="turquia" onmouseover="nueve()">
+<area shape=rect coords="520,368,736,477" title="ucrania" onmouseover="diez()">
+
+</map>
