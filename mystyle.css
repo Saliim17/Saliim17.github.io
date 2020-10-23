@@ -1,7 +1,7 @@
 #cuerpo
 {
-    background:url(fondo1.gif);
-    cursor:url('flag.ico'),url('cursor.cur'),pointer;
+    background:url(img/fondo1.gif);
+    cursor:url('img/flag.ico'),url('img/cursor.cur'),pointer;
 }
 #lista1
 {
@@ -24,28 +24,43 @@
     font-size:30;
     font-family:impact;
 }
-table 
+table
 {
-    border-collapse:collapse;
     width:80%;
     height:200;
     color:red;
     font-size:40;
-    font-family:impact;
+    font-family:arial;
 }
-th
+th 
 {
     text-align:left;
-    border-bottom:5px solid red;
+    border-bottom:5px solid red !important;
     color:#FCA916;
     font-size:30;
     font-family:impact;
 }
-td 
+td
 {
     text-align: left;
-    border-bottom:1px solid red;
+    border-bottom:1px solid red !important;
     color:green;
     font-size:20;
     font-family:impact;
+}
+#caption1
+{
+    font-size:60;
+    font-family:impact;
+    color:red;
+}
+.img
+{
+    width:100;
+    height:100;
+}
+.img2
+{
+    width:20;
+    height:20;
 }
