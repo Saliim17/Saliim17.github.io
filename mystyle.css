@@ -1,0 +1,51 @@
+#cuerpo
+{
+    background:url(fondo1.gif);
+    cursor:url('flag.ico'),url('cursor.cur'),pointer;
+}
+#lista1
+{
+    list-style-type:decimal;
+    color:red;
+    font-size:30;
+    font-family:impact;
+}
+#lista2
+{
+    list-style-type:circle;
+    color:green;
+    font-size:30;
+    font-family:impact;
+}
+#lista3
+{
+    list-style-type:lower-greek;
+    color:#FCA916;
+    font-size:30;
+    font-family:impact;
+}
+table 
+{
+    border-collapse:collapse;
+    width:80%;
+    height:200;
+    color:red;
+    font-size:40;
+    font-family:impact;
+}
+th
+{
+    text-align:left;
+    border-bottom:5px solid red;
+    color:#FCA916;
+    font-size:30;
+    font-family:impact;
+}
+td 
+{
+    text-align: left;
+    border-bottom:1px solid red;
+    color:green;
+    font-size:20;
+    font-family:impact;
+}
