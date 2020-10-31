@@ -30,17 +30,21 @@
   <script src="script.js" language="javascript"></script>
   <!--Get stars from github repository-->
   <script> 
-    $.getJSON('https://api.github.com/repos/Saliim17/Saliim17.github.io', function(data) {
+  /*$.getJSON('https://api.github.com/repos/Saliim17/Saliim17.github.io', function(data) 
+    {
 
         var text = `Estrellas en repositorio de GitHub: ${data.stargazers_count}`
-        text = text.concat(" <i class='material-icons icon-teal icon-lighten-3'>album</i>");
+        text = text.concat(" <i class='material-icons icon-teal icon-lighten-3'>star</i>");
         $(".starRating").html(text);
-      });
-      document.addEventListener("DOMContentLoaded", function(){
+    });
+      
+      document.addEventListener("DOMContentLoaded", function()
+      {
         getStars();
       });
 
-      function getStars(){
+      function getStars()
+      {
         loadJSON('https://api.github.com/repos/Saliim17/Saliim17.github.io',
           function(data) { console.log(data); },
           function(xhr) { console.error(xhr); }
@@ -57,7 +61,7 @@
               if (success){
                 var myParsed =JSON.parse(xhr.responseText);
                 console.log(myParsed.stargazers_count);
-                document.getElementById("starRating").innerHTML= "Estrellas en repositorio GITHUB: "+ myParsed.stargazers_count + " <i class='material-icons  icon-teal icon-lighten-3'>album</i>";
+                document.getElementById("starRating").innerHTML= "Estrellas en repositorio GITHUB: "+ myParsed.stargazers_count + " <i class='material-icons  icon-teal icon-lighten-3'>star</i>";
                 $("i.loader").remove();
               }
             } else {
@@ -68,13 +72,17 @@
         };
         xhr.open("GET", path, true);
         xhr.send();
-      }
-  </script>
+      }*/
+      function getStars(){
+    $.get("https://api.github.com/repos/Ayarina/ayarina.github.io", function(data, status){
+        
+        document.getElementById("stars").innerHTML = data['stargazers_count'];
+        console.log(data.stargazers_count);
+    });
+}
+   </script>
 </head>
-    
-  
-
-<body class="blue lighten-2">
+<body class="blue lighten-2" onload="getStars()">
   <a id="up"></a>
   <!-- Dropdown Structure -->
   <nav class="blue lighten-2">
@@ -105,7 +113,7 @@
   <div class="container">
     <div class="section">
 
-      <!--   Icon Section   -->
+      <!--Icon Section-->
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
@@ -159,10 +167,10 @@
     <div class="section">
 
       <div class="row">
-        <div id=contact class="col s12 center">
+        <div id="contact" class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
           <h4> A LITTLE FORM</h4>
-          <h5 id="starRating" class="header col s12 light black-text text-darken-2"></h5><i class="loader fas fa-sync fa-spin fa-4x"></i>
+          <h5 class="header col s12 light black-text text-darken-2">Estrellas del github: <span id="stars"></span><i class="material-icons">grade</i></h5><i class="loader fas fa-sync fa-spin fa-4x"></i>
         </div>
       </div>
 
@@ -219,7 +227,7 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made with <a id=down class="brown-text text-lighten-3" href="http://materializecss.com" target="_blank">Materialize</a> by<a class="brown-text text-lighten-3" href="https://github.com/Saliim17" target="_blank"> Saliim17</a><a class="right brown-text text-lighten-3" href="https://coredumped.es/category/inicio/" target="_blank">>Core_Dumped</a>
+      Made with <a id="down" class="brown-text text-lighten-3" href="http://materializecss.com" target="_blank">Materialize</a> by<a class="brown-text text-lighten-3" href="https://github.com/Saliim17" target="_blank"> Saliim17</a><a class="right brown-text text-lighten-3" href="https://coredumped.es/category/inicio/" target="_blank">>Core_Dumped</a>
       </div>
     </div>
   </footer>
